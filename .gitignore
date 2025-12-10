@@ -1,2 +1,10 @@
+# macOS metadata
 .DS_Store
-task*/.DS_Store
+.AppleDouble
+.LSOverride
+# Icon files
+Icon?
+# Resource forks, metadata
+._*
+.Spotlight-V100
+.Trashes
