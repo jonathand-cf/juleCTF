@@ -1,0 +1,912 @@
+<?xml version="1.0" encoding="utf-8"?>
+<geogebra format="5.0" version="5.2.905.1" app="classic" platform="d" id="a0dd9890-8dd3-43a8-8805-67773062b359"  xsi:noNamespaceSchemaLocation="http://www.geogebra.org/apps/xsd/ggb.xsd" xmlns="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+<gui>
+	<window width="1876" height="932" />
+	<perspectives>
+<perspective id="tmp">
+	<panes>
+		<pane location="" divider="0.19722814498933902" orientation="1" />
+		<pane location="1" divider="0.43336886993603413" orientation="1" />
+	</panes>
+	<views>
+		<view id="4097" visible="false" inframe="false" stylebar="true" location="1,1,1" size="417" window="100,100,700,550" />
+		<view id="512" toolbar="0 | 1 501 5 19 , 67 | 2 15 45 18 , 7 37 | 514 3 9 , 13 44 , 47 | 16 51 | 551 550 11 ,  20 22 21 23 , 55 56 57 , 12 | 69 | 510 511 , 512 513 | 533 531 , 534 532 , 522 523 , 537 536 , 535 , 538 | 521 520 | 36 , 38 49 560 | 571 30 29 570 31 33 | 17 | 540 40 41 42 , 27 28 35 , 6 , 502" visible="false" inframe="false" stylebar="false" location="1,1,1" size="500" window="100,100,600,400" />
+		<view id="1" visible="true" inframe="false" stylebar="false" location="1,1" size="656" window="100,100,600,400" />
+		<view id="4" toolbar="0 || 2020 , 2021 , 2022 , 66 || 2001 , 2003 , 2002 , 2004 , 2005 || 2040 , 2041 , 2042 , 2044 , 2043" visible="false" inframe="false" stylebar="false" location="1,1" size="300" window="100,100,600,400" />
+		<view id="8" toolbar="1001 | 1002 | 1003  || 1005 | 1004 || 1006 | 1007 | 1010 || 1008 1009 || 66 68 || 6" visible="true" inframe="false" stylebar="false" location="1,3" size="813" window="100,100,600,400" />
+		<view id="2" visible="true" inframe="false" stylebar="false" location="3" size="370" tab="ALGEBRA" window="100,100,600,400" />
+		<view id="16" visible="false" inframe="false" stylebar="false" location="1" size="150" window="50,50,500,500" />
+		<view id="32" visible="false" inframe="false" stylebar="true" location="1" size="150" window="50,50,500,500" />
+		<view id="64" toolbar="0" visible="false" inframe="false" stylebar="false" location="1" size="150" window="50,50,500,500" />
+		<view id="70" toolbar="0 || 2020 || 2021 || 2022" visible="false" inframe="false" stylebar="true" location="1" size="150" window="50,50,500,500" />
+	</views>
+	<toolbar show="true" items="0 39 73 62 | 1 501 67 , 5 19 , 72 75 76 | 2 15 45 , 18 65 , 7 37 | 4 3 8 9 , 13 44 , 58 , 47 | 16 51 64 , 70 | 10 34 53 11 , 24  20 22 , 21 23 | 55 56 57 , 12 | 36 46 , 38 49  50 , 71  14  68 | 30 29 54 32 31 33 | 25 17 26 60 52 61 | 40 41 42 , 27 28 35 , 6" position="1" help="false" />
+	<input show="true" cmd="true" top="algebra" />
+	<dockBar show="true" east="true" />
+</perspective>
+	</perspectives>
+	<labelingStyle  val="0"/>
+	<font  size="16"/>
+</gui>
+<euclidianView>
+	<viewNumber viewNo="1"/>
+	<size  width="656" height="759"/>
+	<coordSystem xZero="338.3534580929239" yZero="604.7697391066249" scale="20.1207406745679" yscale="20.12074067456782"/>
+	<evSettings axes="true" grid="true" gridIsBold="false" pointCapturing="3" rightAngleStyle="1" checkboxSize="26" gridType="3"/>
+	<bgColor r="255" g="255" b="255"/>
+	<axesColor r="28" g="28" b="31"/>
+	<gridColor r="180" g="179" b="186"/>
+	<lineStyle axes="1" grid="0"/>
+	<axis id="0" show="true" label="" unitLabel="" tickStyle="1" showNumbers="true"/>
+	<axis id="1" show="true" label="" unitLabel="" tickStyle="1" showNumbers="true"/>
+</euclidianView>
+<algebraView>
+	<mode val="3"/>
+</algebraView>
+<kernel>
+	<continuous val="false"/>
+	<usePathAndRegionParameters val="true"/>
+	<decimals val="2"/>
+	<angleUnit val="degree"/>
+	<algebraStyle val="0" spreadsheet="0"/>
+	<coordStyle val="0"/>
+</kernel>
+<tableview min="0.0" max="0.0" step="0.0"/>
+<scripting blocked="false" disabled="false"/>
+<construction title="" author="" date="">
+<element type="point" label="A">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="77" g="77" b="255" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<coords x="-2.0" y="-2.0" z="1.0"/>
+</element>
+<element type="point" label="B">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="77" g="77" b="255" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<coords x="2.0" y="-2.0" z="1.0"/>
+</element>
+<element type="point" label="C">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="77" g="77" b="255" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<coords x="2.0" y="2.0" z="1.0"/>
+</element>
+<element type="point" label="D">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="77" g="77" b="255" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<coords x="10.0" y="2.0" z="1.0"/>
+</element>
+<element type="point" label="E">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="77" g="77" b="255" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<coords x="4.0" y="10.0" z="1.0"/>
+</element>
+<element type="point" label="F">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="77" g="77" b="255" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<coords x="8.0" y="10.0" z="1.0"/>
+</element>
+<element type="point" label="G">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="77" g="77" b="255" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<coords x="2.0" y="18.0" z="1.0"/>
+</element>
+<element type="point" label="H">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="77" g="77" b="255" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<coords x="6.0" y="18.0" z="1.0"/>
+</element>
+<command name="Point">
+	<input a0="yAxis"/>
+	<output a0="I"/>
+</command>
+<element type="point" label="I">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="125" g="125" b="255" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<coords x="0.0" y="26.0" z="1.0"/>
+</element>
+<element type="point" label="J">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="77" g="77" b="255" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<coords x="-6.0" y="18.0" z="1.0"/>
+</element>
+<element type="point" label="K">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="77" g="77" b="255" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<coords x="-2.0" y="18.0" z="1.0"/>
+</element>
+<element type="point" label="L">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="77" g="77" b="255" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<coords x="-8.0" y="10.0" z="1.0"/>
+</element>
+<element type="point" label="M">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="77" g="77" b="255" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<coords x="-4.0" y="10.0" z="1.0"/>
+</element>
+<element type="point" label="N">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="77" g="77" b="255" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<coords x="-10.0" y="2.0" z="1.0"/>
+</element>
+<element type="point" label="O">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="77" g="77" b="255" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<coords x="-2.0" y="2.0" z="1.0"/>
+</element>
+<command name="Polygon">
+	<input a0="A" a1="B" a2="C" a3="D" a4="E" a5="F" a6="G" a7="H" a8="I" a9="J" a10="K" a11="L" a12="M" a13="N" a14="O"/>
+	<output a0="Juletre" a1="a" a2="b" a3="c" a4="d" a5="e" a6="f" a7="g" a8="h" a9="i" a10="j" a11="k_1" a12="l" a13="m" a14="n_1" a15="o"/>
+</command>
+<element type="polygon" label="Juletre">
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="102" b="51" alpha="0.75"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+</element>
+<element type="segment" label="a">
+	<show object="true" label="false"/>
+	<objColor r="0" g="102" b="51" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+	<startStyle val="default"/>
+	<endStyle val="default"/>
+	<coords x="0.0" y="4.0" z="8.0"/>
+</element>
+<element type="segment" label="b">
+	<show object="true" label="false"/>
+	<objColor r="0" g="102" b="51" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+	<startStyle val="default"/>
+	<endStyle val="default"/>
+	<coords x="-4.0" y="0.0" z="8.0"/>
+</element>
+<element type="segment" label="c">
+	<show object="true" label="false"/>
+	<objColor r="0" g="102" b="51" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+	<startStyle val="default"/>
+	<endStyle val="default"/>
+	<coords x="0.0" y="8.0" z="-16.0"/>
+</element>
+<element type="segment" label="d">
+	<show object="true" label="false"/>
+	<objColor r="0" g="102" b="51" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+	<startStyle val="default"/>
+	<endStyle val="default"/>
+	<coords x="-8.0" y="-6.0" z="92.0"/>
+</element>
+<element type="segment" label="e">
+	<show object="true" label="false"/>
+	<objColor r="0" g="102" b="51" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+	<startStyle val="default"/>
+	<endStyle val="default"/>
+	<coords x="0.0" y="4.0" z="-40.0"/>
+</element>
+<element type="segment" label="f">
+	<show object="true" label="false"/>
+	<objColor r="0" g="102" b="51" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+	<startStyle val="default"/>
+	<endStyle val="default"/>
+	<coords x="-8.0" y="-6.0" z="124.0"/>
+</element>
+<element type="segment" label="g">
+	<show object="true" label="false"/>
+	<objColor r="0" g="102" b="51" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+	<startStyle val="default"/>
+	<endStyle val="default"/>
+	<coords x="0.0" y="4.0" z="-72.0"/>
+</element>
+<element type="segment" label="h">
+	<show object="true" label="false"/>
+	<objColor r="0" g="102" b="51" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+	<startStyle val="default"/>
+	<endStyle val="default"/>
+	<coords x="-8.0" y="-6.0" z="156.0"/>
+</element>
+<element type="segment" label="i">
+	<show object="true" label="false"/>
+	<objColor r="0" g="102" b="51" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+	<startStyle val="default"/>
+	<endStyle val="default"/>
+	<coords x="8.0" y="-6.0" z="156.0"/>
+</element>
+<element type="segment" label="j">
+	<show object="true" label="false"/>
+	<objColor r="0" g="102" b="51" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+	<startStyle val="default"/>
+	<endStyle val="default"/>
+	<coords x="0.0" y="4.0" z="-72.0"/>
+</element>
+<element type="segment" label="k_1">
+	<show object="true" label="false"/>
+	<objColor r="0" g="102" b="51" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+	<startStyle val="default"/>
+	<endStyle val="default"/>
+	<coords x="8.0" y="-6.0" z="124.0"/>
+</element>
+<element type="segment" label="l">
+	<show object="true" label="false"/>
+	<objColor r="0" g="102" b="51" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+	<startStyle val="default"/>
+	<endStyle val="default"/>
+	<coords x="0.0" y="4.0" z="-40.0"/>
+</element>
+<element type="segment" label="m">
+	<show object="true" label="false"/>
+	<objColor r="0" g="102" b="51" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+	<startStyle val="default"/>
+	<endStyle val="default"/>
+	<coords x="8.0" y="-6.0" z="92.0"/>
+</element>
+<element type="segment" label="n_1">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="102" b="51" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+	<startStyle val="default"/>
+	<endStyle val="default"/>
+	<coords x="0.0" y="8.0" z="-16.0"/>
+</element>
+<element type="segment" label="o">
+	<show object="true" label="false"/>
+	<objColor r="0" g="102" b="51" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+	<startStyle val="default"/>
+	<endStyle val="default"/>
+	<coords x="4.0" y="0.0" z="8.0"/>
+</element>
+<element type="point" label="P">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="77" g="77" b="255" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<coords x="0.7964819398063502" y="24.94012414563483" z="1.0"/>
+</element>
+<element type="point" label="Q">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="77" g="77" b="255" alpha="0.0"/>
+	<layer val="0"/>
+	<labelOffset x="0" y="-22"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<coords x="0.5820763566956029" y="26.10855993251396" z="1.0"/>
+</element>
+<element type="point" label="R">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="77" g="77" b="255" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<coords x="1.4809029901837012" y="26.582734666540475" z="1.0"/>
+</element>
+<element type="point" label="S">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="77" g="77" b="255" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<coords x="0.39723632708622875" y="26.696804841603367" z="1.0"/>
+</element>
+<command name="Point">
+	<input a0="yAxis"/>
+	<output a0="T"/>
+</command>
+<element type="point" label="T">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="125" g="125" b="255" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<coords x="0.0" y="27.81469255721971" z="1.0"/>
+</element>
+<element type="point" label="U">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="77" g="77" b="255" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<coords x="-0.44688296837917085" y="26.742432911628523" z="1.0"/>
+</element>
+<element type="point" label="V">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="77" g="77" b="255" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<coords x="-1.519142613970354" y="26.594141684046765" z="1.0"/>
+</element>
+<element type="point" label="W">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="77" g="77" b="255" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<coords x="-0.5932515865578811" y="26.168613185088955" z="1.0"/>
+</element>
+<element type="point" label="Z">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="77" g="77" b="255" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<coords x="-0.8163065246935788" y="24.916073917096185" z="1.0"/>
+</element>
+<command name="Polygon">
+	<input a0="I" a1="P" a2="Q" a3="R" a4="S" a5="T" a6="U" a7="V" a8="W" a9="Z"/>
+	<output a0="Julestjerne" a1="i_1" a2="p" a3="q" a4="r" a5="s" a6="t" a7="u" a8="v" a9="w" a10="z_1"/>
+</command>
+<element type="polygon" label="Julestjerne">
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<show object="true" label="false" ev="4"/>
+	<objColor r="255" g="204" b="102" alpha="1.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+</element>
+<element type="segment" label="i_1">
+	<show object="true" label="false"/>
+	<objColor r="255" g="204" b="102" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+	<startStyle val="default"/>
+	<endStyle val="default"/>
+	<coords x="1.0598758543651705" y="0.7964819398063502" z="-20.708530434965105"/>
+</element>
+<element type="segment" label="p">
+	<show object="true" label="false"/>
+	<objColor r="255" g="204" b="102" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+	<startStyle val="default"/>
+	<endStyle val="default"/>
+	<coords x="-1.1684357868791295" y="-0.2144055831107473" z="6.2779398623719125"/>
+</element>
+<element type="segment" label="q">
+	<show object="true" label="false"/>
+	<objColor r="255" g="204" b="102" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+	<startStyle val="default"/>
+	<endStyle val="default"/>
+	<coords x="-0.47417473402651567" y="0.8988266334880983" z="-23.191063127744513"/>
+</element>
+<element type="segment" label="r">
+	<show object="true" label="false"/>
+	<objColor r="255" g="204" b="102" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+	<startStyle val="default"/>
+	<endStyle val="default"/>
+	<coords x="-0.11407017506289208" y="-1.0836666630974725" z="28.975750235436834"/>
+</element>
+<element type="segment" label="s">
+	<show object="true" label="false"/>
+	<objColor r="255" g="204" b="102" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+	<startStyle val="default"/>
+	<endStyle val="default"/>
+	<coords x="-1.1178877156163445" y="-0.39723632708622875" z="11.049006310462621"/>
+</element>
+<element type="segment" label="t">
+	<show object="true" label="false"/>
+	<objColor r="255" g="204" b="102" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+	<startStyle val="default"/>
+	<endStyle val="default"/>
+	<coords x="1.0722596455911884" y="-0.44688296837917085" z="12.429912374524376"/>
+</element>
+<element type="segment" label="u">
+	<show object="true" label="false"/>
+	<objColor r="255" g="204" b="102" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+	<startStyle val="default"/>
+	<endStyle val="default"/>
+	<coords x="0.14829122758175828" y="-1.0722596455911833" z="28.74110046003512"/>
+</element>
+<element type="segment" label="v">
+	<show object="true" label="false"/>
+	<objColor r="255" g="204" b="102" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+	<startStyle val="default"/>
+	<endStyle val="default"/>
+	<coords x="0.4255284989578101" y="0.925891027412473" z="-23.97683869076928"/>
+</element>
+<element type="segment" label="w">
+	<show object="true" label="false"/>
+	<objColor r="255" g="204" b="102" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+	<startStyle val="default"/>
+	<endStyle val="default"/>
+	<coords x="1.2525392679927698" y="-0.22305493813569766" z="6.580109303059777"/>
+</element>
+<element type="segment" label="z_1">
+	<show object="true" label="false"/>
+	<objColor r="255" g="204" b="102" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+	<startStyle val="default"/>
+	<endStyle val="default"/>
+	<coords x="-1.0839260829038153" y="0.8163065246935788" z="-21.223969642033047"/>
+</element>
+<cascell caslabel="tekst1" >
+	<cellPair>
+		<inputCell>
+			<expression value="tekst1:=Text(RotateText(&quot;God jul! &#x1f385;&quot;, 30°), (-10, 25), true, true)"  eval="Text(RotateText(&quot;God jul! &#x1f385;&quot;, 30°), (-10, 25), true, true)" evalCmd=""/>
+		</inputCell>
+		<outputCell>
+			<expression value="tekst1:=NaN" native="true"/>
+		</outputCell>
+	</cellPair>
+</cascell>
+<element type="numeric" label="tekst1">
+	<value val="NaN"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+</element>
+<cascell caslabel="antallHjørner" >
+	<cellPair>
+		<inputCell>
+			<expression value="antallHjørner := 15"  eval="Evaluate(15)" evalCmd=""/>
+		</inputCell>
+		<outputCell>
+			<expression value="antallHjørner:=15" native="true"/>
+		</outputCell>
+	</cellPair>
+</cascell>
+<expression label="antallHjørner" exp="15"/>
+<element type="numeric" label="antallHjørner">
+	<value val="15.0"/>
+	<show object="false" label="true"/>
+	<layer val="0"/>
+	<labelMode val="1"/>
+	<animation speed="1" type="0" playing="false"/>
+</element>
+<cascell caslabel="kantLengder" >
+	<cellPair>
+		<inputCell>
+			<expression value="kantLengder := {a, b, c, d, e, f, g, h, i, j, k_1, l, m, n_1, o}"  eval="Evaluate({a, b, c, d, e, f, g, h, i, j, k_1, l, m, n_1, o})" evalCmd=""/>
+		</inputCell>
+		<outputCell>
+			<expression value="kantLengder:={4, 4, 8, 10, 4, 10, 4, 10, 10, 4, 10, 4, 10, 8, 4}" native="true"/>
+		</outputCell>
+	</cellPair>
+</cascell>
+<element type="list" label="kantLengder">
+	<objColor r="0" g="100" b="0" alpha="0.10000000149011612"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<angleStyle val="0"/>
+</element>
+<cascell caslabel="kummulativLengde" >
+	<cellPair>
+		<inputCell>
+			<expression value="kummulativLengde := Sequence(Sum(kantLengder(x), x, 1, y), y, 0, antallHjørner)"  eval="Sequence(Sum(kantLengder(x), x, 1, y), y, 0, antallHjørner)" evalCmd=""/>
+		</inputCell>
+		<outputCell>
+			<expression value="kummulativLengde:={0, 4, 8, 16, 26, 30, 40, 44, 54, 64, 68, 78, 82, 92, 100, 104}" native="true"/>
+		</outputCell>
+	</cellPair>
+</cascell>
+<element type="list" label="kummulativLengde">
+	<objColor r="0" g="100" b="0" alpha="0.10000000149011612"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<angleStyle val="0"/>
+</element>
+<cascell caslabel="desimaler" >
+	<cellPair>
+		<inputCell>
+			<expression value="desimaler(x) := -floor(x) + x"  eval="Evaluate((-floor(x)) + x)" evalCmd=""/>
+		</inputCell>
+		<outputCell>
+			<expression value="desimaler(x):=(-floor(x)) + x" native="true"/>
+		</outputCell>
+	</cellPair>
+</cascell>
+<expression label="desimaler" exp="desimaler(x) = (-floor(x)) + x" type="function"/>
+<element type="function" label="desimaler">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="0" g="100" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+</element>
+<cascell caslabel="omkrets" >
+	<cellPair>
+		<inputCell>
+			<expression value="omkrets := kummulativLengde(antallHjørner+1)"  eval="Evaluate(kummulativLengde(antallHjørner + 1))" evalCmd=""/>
+		</inputCell>
+		<outputCell>
+			<expression value="omkrets:=104" native="true"/>
+		</outputCell>
+	</cellPair>
+</cascell>
+<element type="numeric" label="omkrets">
+	<value val="104.0"/>
+</element>
+<cascell caslabel="andelLengde" >
+	<cellPair>
+		<inputCell>
+			<expression value="andelLengde := kummulativLengde/omkrets"  eval="Evaluate(kummulativLengde / omkrets)" evalCmd=""/>
+		</inputCell>
+		<outputCell>
+			<expression value="andelLengde:={0, 1 / 26, 1 / 13, 2 / 13, 1 / 4, 15 / 52, 5 / 13, 11 / 26, 27 / 52, 8 / 13, 17 / 26, 3 / 4, 41 / 52, 23 / 26, 25 / 26, 1}" native="true"/>
+		</outputCell>
+	</cellPair>
+</cascell>
+<element type="list" label="andelLengde">
+	<objColor r="0" g="100" b="0" alpha="0.10000000149011612"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<angleStyle val="0"/>
+</element>
+<cascell caslabel="interpoler" >
+	<cellPair>
+		<inputCell>
+			<expression value="interpoler(Node1, Node2, d1) := Node1 (-d1 + 1) + Node2 d1"  eval="Evaluate((Node1 * ((-d1) + 1)) + (Node2 * d1))" evalCmd=""/>
+		</inputCell>
+		<outputCell>
+			<expression value="interpoler(Node1, Node2, d1):=(Node1 * ((-d1) + 1)) + (Node2 * d1)" native="true"/>
+		</outputCell>
+	</cellPair>
+</cascell>
+<expression label="interpoler" exp="interpoler(Node1, Node2, d1) = (Node1 * ((-d1) + 1)) + (Node2 * d1)" type="function"/>
+<element type="functionnvar" label="interpoler">
+	<show object="false" label="true"/>
+	<objColor r="204" g="0" b="0" alpha="0.75"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+</element>
+<cascell caslabel="hjørner" >
+	<cellPair>
+		<inputCell>
+			<expression value="hjørner := {A, B, C, D, E, F, G, H, I, J, K, L, M, N, O}"  eval="Evaluate({A, B, C, D, E, F, G, H, I, J, K, L, M, N, O})" evalCmd=""/>
+		</inputCell>
+		<outputCell>
+			<expression value="hjørner:={(-2, -2), (2, -2), (2, 2), (10, 2), (4, 10), (8, 10), (2, 18), (6, 18), (0, 26), (-6, 18), (-2, 18), (-8, 10), (-4, 10), (-10, 2), (-2, 2)}" native="true"/>
+		</outputCell>
+	</cellPair>
+</cascell>
+<element type="list" label="hjørner">
+	<show object="false" label="true"/>
+	<objColor r="0" g="100" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<angleStyle val="0"/>
+</element>
+<cascell caslabel="gåRundtJuletreet" >
+	<cellPair>
+		<inputCell>
+			<expression value="gåRundtJuletreet(x) := If(desimaler(x) &lt; andelLengde(2), interpoler(hjørner(1), hjørner(2), (desimaler(x) - andelLengde(1))/(andelLengde(2) - andelLengde(1))), If(desimaler(x) &lt; andelLengde(3), interpoler(hjørner(2), hjørner(3), (desimaler(x) - andelLengde(2))/(andelLengde(3) - andelLengde(2))), If(desimaler(x) &lt; andelLengde(4), interpoler(hjørner(3), hjørner(4), (desimaler(x) - andelLengde(3))/(andelLengde(4) - andelLengde(3))), If(desimaler(x) &lt; andelLengde(5), interpoler(hjørner(4), hjørner(5), (desimaler(x) - andelLengde(4))/(andelLengde(5) - andelLengde(4))), If(desimaler(x) &lt; andelLengde(6), interpoler(hjørner(5), hjørner(6), (desimaler(x) - andelLengde(5))/(andelLengde(6) - andelLengde(5))), If(desimaler(x) &lt; andelLengde(7), interpoler(hjørner(6), hjørner(7), (desimaler(x) - andelLengde(6))/(andelLengde(7) - andelLengde(6))), If(desimaler(x) &lt; andelLengde(8), interpoler(hjørner(7), hjørner(8), (desimaler(x) - andelLengde(7))/(andelLengde(8) - andelLengde(7))), If(desimaler(x) &lt; andelLengde(9), interpoler(hjørner(8), hjørner(9), (desimaler(x) - andelLengde(8))/(andelLengde(9) - andelLengde(8))), If(desimaler(x) &lt; andelLengde(10), interpoler(hjørner(9), hjørner(10), (desimaler(x) - andelLengde(9))/(andelLengde(10) - andelLengde(9))), If(desimaler(x) &lt; andelLengde(11), interpoler(hjørner(10), hjørner(11), (desimaler(x) - andelLengde(10))/(andelLengde(11) - andelLengde(10))), If(desimaler(x) &lt; andelLengde(12), interpoler(hjørner(11), hjørner(12), (desimaler(x) - andelLengde(11))/(andelLengde(12) - andelLengde(11))), If(desimaler(x) &lt; andelLengde(13), interpoler(hjørner(12), hjørner(13), (desimaler(x) - andelLengde(12))/(andelLengde(13) - andelLengde(12))), If(desimaler(x) &lt; andelLengde(14), interpoler(hjørner(13), hjørner(14), (desimaler(x) - andelLengde(13))/(andelLengde(14) - andelLengde(13))), If(desimaler(x) &lt; andelLengde(15), interpoler(hjørner(14), hjørner(15), (desimaler(x) - andelLengde(14))/(andelLengde(15) - andelLengde(14))), If(desimaler(x) &lt; andelLengde(16), interpoler(hjørner(15), hjørner(1), (desimaler(x) - andelLengde(15))/(andelLengde(16) - andelLengde(15))))))))))))))))))"  eval="Evaluate(If(desimaler(x) &lt; andelLengde(2), interpoler(hjørner(1), hjørner(2), (desimaler(x) - andelLengde(1)) / (andelLengde(2) - andelLengde(1))), If(desimaler(x) &lt; andelLengde(3), interpoler(hjørner(2), hjørner(3), (desimaler(x) - andelLengde(2)) / (andelLengde(3) - andelLengde(2))), If(desimaler(x) &lt; andelLengde(4), interpoler(hjørner(3), hjørner(4), (desimaler(x) - andelLengde(3)) / (andelLengde(4) - andelLengde(3))), If(desimaler(x) &lt; andelLengde(5), interpoler(hjørner(4), hjørner(5), (desimaler(x) - andelLengde(4)) / (andelLengde(5) - andelLengde(4))), If(desimaler(x) &lt; andelLengde(6), interpoler(hjørner(5), hjørner(6), (desimaler(x) - andelLengde(5)) / (andelLengde(6) - andelLengde(5))), If(desimaler(x) &lt; andelLengde(7), interpoler(hjørner(6), hjørner(7), (desimaler(x) - andelLengde(6)) / (andelLengde(7) - andelLengde(6))), If(desimaler(x) &lt; andelLengde(8), interpoler(hjørner(7), hjørner(8), (desimaler(x) - andelLengde(7)) / (andelLengde(8) - andelLengde(7))), If(desimaler(x) &lt; andelLengde(9), interpoler(hjørner(8), hjørner(9), (desimaler(x) - andelLengde(8)) / (andelLengde(9) - andelLengde(8))), If(desimaler(x) &lt; andelLengde(10), interpoler(hjørner(9), hjørner(10), (desimaler(x) - andelLengde(9)) / (andelLengde(10) - andelLengde(9))), If(desimaler(x) &lt; andelLengde(11), interpoler(hjørner(10), hjørner(11), (desimaler(x) - andelLengde(10)) / (andelLengde(11) - andelLengde(10))), If(desimaler(x) &lt; andelLengde(12), interpoler(hjørner(11), hjørner(12), (desimaler(x) - andelLengde(11)) / (andelLengde(12) - andelLengde(11))), If(desimaler(x) &lt; andelLengde(13), interpoler(hjørner(12), hjørner(13), (desimaler(x) - andelLengde(12)) / (andelLengde(13) - andelLengde(12))), If(desimaler(x) &lt; andelLengde(14), interpoler(hjørner(13), hjørner(14), (desimaler(x) - andelLengde(13)) / (andelLengde(14) - andelLengde(13))), If(desimaler(x) &lt; andelLengde(15), interpoler(hjørner(14), hjørner(15), (desimaler(x) - andelLengde(14)) / (andelLengde(15) - andelLengde(14))), If(desimaler(x) &lt; andelLengde(16), interpoler(hjørner(15), hjørner(1), (desimaler(x) - andelLengde(15)) / (andelLengde(16) - andelLengde(15)))))))))))))))))))" evalCmd=""/>
+		</inputCell>
+		<outputCell>
+			<expression value="gåRundtJuletreet(x):=If(1 / 26 &gt; (-floor(x)) + x, ((104 * x) - (104 * floor(x)) - 2, -2), If(1 / 13 &gt; (-floor(x)) + x, (2, (104 * x) - (104 * floor(x)) - 6), If(2 / 13 &gt; (-floor(x)) + x, ((104 * x) - (104 * floor(x)) - 6, 2), If(1 / 4 &gt; (-floor(x)) + x, (((-312 * x) + (312 * floor(x)) + 98) / 5, ((416 * x) - (416 * floor(x)) - 54) / 5), If(15 / 52 &gt; (-floor(x)) + x, ((104 * x) - (104 * floor(x)) - 22, 10), If(5 / 13 &gt; (-floor(x)) + x, (((-312 * x) + (312 * floor(x)) + 130) / 5, ((416 * x) - (416 * floor(x)) - 70) / 5), If(11 / 26 &gt; (-floor(x)) + x, ((104 * x) - (104 * floor(x)) - 38, 18), If(27 / 52 &gt; (-floor(x)) + x, (((-312 * x) + (312 * floor(x)) + 162) / 5, ((416 * x) - (416 * floor(x)) - 86) / 5), If(8 / 13 &gt; (-floor(x)) + x, (((-312 * x) + (312 * floor(x)) + 162) / 5, ((-416 * x) + (416 * floor(x)) + 346) / 5), If(17 / 26 &gt; (-floor(x)) + x, ((104 * x) - (104 * floor(x)) - 70, 18), If(3 / 4 &gt; (-floor(x)) + x, (((-312 * x) + (312 * floor(x)) + 194) / 5, ((-416 * x) + (416 * floor(x)) + 362) / 5), If(41 / 52 &gt; (-floor(x)) + x, ((104 * x) - (104 * floor(x)) - 86, 10), If(23 / 26 &gt; (-floor(x)) + x, (((-312 * x) + (312 * floor(x)) + 226) / 5, ((-416 * x) + (416 * floor(x)) + 378) / 5), If(25 / 26 &gt; (-floor(x)) + x, ((104 * x) - (104 * floor(x)) - 102, 2), If(1 &gt; (-floor(x)) + x, (-2, (-104 * x) + (104 * floor(x)) + 102))))))))))))))))" native="true"/>
+		</outputCell>
+	</cellPair>
+</cascell>
+<cascell caslabel="flaggBytes" >
+	<cellPair>
+		<inputCell>
+			<expression value="flaggBytes := Reverse(TextToUnicode(&quot;JUL{falskt_flagg}&quot;))" />
+		</inputCell>
+		<outputCell>
+			<expression value="flaggBytes:=Reverse[TextToUnicode[&quot;JUL{falskt_flagg}&quot;]]"/>
+		</outputCell>
+	</cellPair>
+</cascell>
+<element type="list" label="flaggBytes">
+	<objColor r="0" g="100" b="0" alpha="0.0"/>
+	<fixed val="true"/>
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<angleStyle val="0"/>
+</element>
+<cascell caslabel="flaggSomHeltall" >
+	<cellPair>
+		<inputCell>
+			<expression value="flaggSomHeltall := Sum(flaggBytes(n) * 256^(n-1), n, 1, Length(flaggBytes))"  eval="Sum((flaggBytes(n) * 256^(n - 1)), n, 1, Length(flaggBytes))" evalCmd=""/>
+		</inputCell>
+		<outputCell>
+			<expression value="flaggSomHeltall:=25294276649200217772992258979009246226301" native="true"/>
+		</outputCell>
+	</cellPair>
+</cascell>
+<element type="numeric" label="flaggSomHeltall">
+	<value val="2.5294276649200217E40"/>
+</element>
+<cascell caslabel="primtall" >
+	<cellPair>
+		<inputCell>
+			<expression value="primtall := {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101, 103, 107, 109, 113, 127, 131, 137, 139, 149, 151, 157, 163, 167, 173, 179, 181, 191, 193, 197, 199, 211, 223, 227, 229, 233, 239, 241, 251, 257, 263, 269, 271, 277, 281, 283}"  eval="Evaluate({2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101, 103, 107, 109, 113, 127, 131, 137, 139, 149, 151, 157, 163, 167, 173, 179, 181, 191, 193, 197, 199, 211, 223, 227, 229, 233, 239, 241, 251, 257, 263, 269, 271, 277, 281, 283})" evalCmd=""/>
+		</inputCell>
+		<outputCell>
+			<expression value="primtall:={2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101, 103, 107, 109, 113, 127, 131, 137, 139, 149, 151, 157, 163, 167, 173, 179, 181, 191, 193, 197, 199, 211, 223, 227, 229, 233, 239, 241, 251, 257, 263, 269, 271, 277, 281, 283}" native="true"/>
+		</outputCell>
+	</cellPair>
+</cascell>
+<expression label="primtall" exp="{2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101, 103, 107, 109, 113, 127, 131, 137, 139, 149, 151, 157, 163, 167, 173, 179, 181, 191, 193, 197, 199, 211, 223, 227, 229, 233, 239, 241, 251, 257, 263, 269, 271, 277, 281, 283}"/>
+<element type="list" label="primtall">
+	<objColor r="0" g="100" b="0" alpha="0.10000000149011612"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<angleStyle val="0"/>
+</element>
+<cascell caslabel="Julekuler" >
+	<cellPair>
+		<inputCell>
+			<expression value="Julekuler := Sequence(gåRundtJuletreet(flaggSomHeltall / primtall(n)), n, 1, Length(primtall))"  eval="Sequence(gåRundtJuletreet(flaggSomHeltall / primtall(n)), n, 1, Length(primtall))" evalCmd=""/>
+		</inputCell>
+		<outputCell>
+			<expression value="Julekuler:={(6 / 5, 122 / 5), (-14 / 5, 254 / 15), (178 / 25, 146 / 25), (62 / 7, 2), (-322 / 55, 414 / 55), (2, 2), (106 / 17, 2), (598 / 95, 1166 / 95), (-842 / 115, 1254 / 115), (146 / 29, 18), (-1106 / 155, 902 / 155), (298 / 37, 2), (-1158 / 205, 3786 / 205), (-1146 / 215, 4062 / 215), (-866 / 235, 3702 / 235), (514 / 53, 2), (-210 / 59, 1254 / 59), (-190 / 61, 2), (-594 / 67, 2), (614 / 71, 2), (-2374 / 365, 4378 / 365), (-898 / 395, 6966 / 395), (334 / 83, 2), (-558 / 445, 10826 / 445), (3266 / 485, 3082 / 485), (90 / 101, 2506 / 101), (2334 / 515, 10278 / 515), (1022 / 107, 2), (226 / 109, 18), (842 / 113, 610 / 113), (3094 / 635, 8998 / 635), (2678 / 655, 9966 / 655), (-894 / 685, 16618 / 685), (-4234 / 695, 8718 / 695), (834 / 149, 2762 / 149), (5278 / 755, 8566 / 755), (7586 / 785, 1922 / 785), (-1122 / 163, 10), (1214 / 167, 942 / 167), (1562 / 173, 2), (-5322 / 895, 16174 / 895), (-5582 / 905, 6434 / 905), (-1346 / 191, 10), (-5366 / 965, 7642 / 965), (-2406 / 985, 22402 / 985), (-5074 / 995, 13798 / 995), (-6602 / 1055, 7374 / 1055), (-634 / 223, 18), (9142 / 1135, 5214 / 1135), (970 / 229, 18), (-678 / 233, 2), (2206 / 239, 2), (-6286 / 1205, 16522 / 1205), (7046 / 1255, 16542 / 1255), (6466 / 1285, 11082 / 1285), (7038 / 1315, 24806 / 1315), (-1230 / 269, 2), (-9266 / 1355, 8422 / 1355), (-2, -2), (-6894 / 1405, 27338 / 1405), (2, 70 / 283)}" native="true"/>
+		</outputCell>
+	</cellPair>
+</cascell>
+<element type="list" label="Julekuler">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="255" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<pointSize val="9"/>
+	<pointStyle val="10"/>
+	<angleStyle val="0"/>
+</element>
+</construction>
+</geogebra>

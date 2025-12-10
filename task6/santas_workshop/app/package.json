@@ -1,0 +1,18 @@
+{
+    "name": "santas-workshop",
+    "version": "0.0.1",
+    "main": "app.js",
+    "scripts": {
+        "start": "node app.js"
+    },
+    "author": "",
+    "description": "Santa's Workshop - Main Application",
+    "dependencies": {
+        "bcrypt": "^6.0.0",
+        "better-sqlite3": "^12.4.6",
+        "body-parser": "^2.2.1",
+        "express": "^5.1.0",
+        "express-session": "^1.18.2",
+        "multer": "^2.0.2"
+    }
+}

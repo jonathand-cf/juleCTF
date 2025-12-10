@@ -1,0 +1,8 @@
+# docker compose build --no-cache && docker compose up
+name: bypass
+services:
+  web:
+    build: .
+    ports:
+      - "8042:3000"
+    restart: unless-stopped

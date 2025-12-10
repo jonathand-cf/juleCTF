@@ -1,0 +1,21 @@
+{
+  "name": "bypass",
+  "author": "santaClauVsE",
+  "version": "0.0.1",
+  "private": true,  
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "14.0.0",
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "@types/node": "24.10.1",
+    "@types/react": "19.2.6",
+    "typescript": "5.9.3"
+  }
+}

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshop Dashboard - Santa's Workshop</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="header-with-logout">
+                <div>
+                    <h1>🎄 Elf Dashboard</h1>
+                    <p class="subtitle">Ho ho ho, <span id="username">...</span>!</p>
+                </div>
+                <button id="logoutBtn" class="btn btn-secondary">Logout</button>
+            </div>
+
+            <div class="dashboard-content">
+                <div class="info-box">
+                    <h2>📢 Workshop Notices</h2>
+                    <div id="noticesDisplay">Loading notices...</div>
+                </div>
+
+                <div class="info-box">
+                    <h2>🎅 Your Elf Profile</h2>
+                    <p>Elf ID: <strong id="userId">...</strong></p>
+                    <p>Elf Name: <strong id="usernameDisplay">...</strong></p>
+                    <p>Workshop Roles: <span id="roleDisplay" class="role-badges">...</span></p>
+                </div>
+
+                <div class="present-section">
+                    <h2>🎁 Inspect a Present</h2>
+                    <p>Enter the name of the present you wish to inspect</p>
+                    <div class="form-group">
+                        <input type="text" id="presentname" placeholder="Enter present name" required>
+                    </div>
+                    <button id="getPresentBtn" class="btn btn-primary btn-large">🎁 Inspect Present</button>
+                    <div id="presentMessage" class="present-message"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        async function loadElfInfo() {
+            try {
+                const response = await fetch('/api/workshop/elf');
+                if (response.ok) {
+                    const data = await response.json();
+                    document.getElementById('username').textContent = data.elf.username;
+                    document.getElementById('usernameDisplay').textContent = data.elf.username;
+                    document.getElementById('userId').textContent = data.elf.id;
+
+                    const roleDisplay = document.getElementById('roleDisplay');
+                    if (data.elf.roles && data.elf.roles.length > 0) {
+                        roleDisplay.innerHTML = data.elf.roles.map(role =>
+                            `<span class="role-badge">${role}</span>`
+                        ).join(' ');
+                    } else {
+                        roleDisplay.textContent = 'No roles assigned';
+                    }
+                } else {
+                    window.location.href = '/login';
+                }
+            } catch (error) {
+                console.error('Error loading elf info:', error);
+                window.location.href = '/login';
+            }
+        }
+
+        async function loadNotices() {
+            try {
+                const response = await fetch('/api/workshop/notices');
+                if (response.ok) {
+                    const data = await response.json();
+                    const noticesDisplay = document.getElementById('noticesDisplay');
+                    if (data.notices && data.notices.length > 0) {
+                        noticesDisplay.innerHTML = data.notices.map(notice =>
+                            `<p>• ${notice.message}</p>`
+                        ).join('');
+                    } else {
+                        noticesDisplay.textContent = 'No notices at this time.';
+                    }
+                }
+            } catch (error) {
+                console.error('Error loading notices:', error);
+                document.getElementById('noticesDisplay').textContent = 'Failed to load notices.';
+            }
+        }
+
+        document.getElementById('getPresentBtn').addEventListener('click', async () => {
+            const presentMessage = document.getElementById('presentMessage');
+            const presentname = document.getElementById('presentname').value;
+
+            if (!presentname) {
+                presentMessage.textContent = 'Please enter the name of the present';
+                presentMessage.className = 'present-message error';
+                return;
+            }
+
+            presentMessage.textContent = 'Unwrapping your present...';
+            presentMessage.className = 'present-message';
+
+            try {
+                const response = await fetch('/api/workshop/present', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ presentname }),
+                });
+
+                const data = await response.text();
+
+                if (response.ok) {
+                    presentMessage.textContent = data;
+                    presentMessage.className = 'present-message success';
+                } else {
+                    presentMessage.textContent = data;
+                    presentMessage.className = 'present-message error';
+                }
+            } catch (error) {
+                presentMessage.textContent = 'An error occurred. Please try again.';
+                presentMessage.className = 'present-message error';
+            }
+        });
+
+        document.getElementById('logoutBtn').addEventListener('click', async () => {
+            try {
+                await fetch('/api/workshop/logout', { method: 'POST' });
+                window.location.href = '/';
+            } catch (error) {
+                console.error('Logout error:', error);
+            }
+        });
+
+        loadElfInfo();
+        loadNotices();
+    </script>
+</body>
+
+</html>

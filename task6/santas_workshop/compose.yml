@@ -1,0 +1,26 @@
+name: santas-workshop
+services:
+  app:
+    build: ./app
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+      - PRESENT_SERVER_URL=http://present_server:1337
+    depends_on:
+      - present_server
+    networks:
+      - app-network
+
+  present_server:
+    build: ./present_server
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
