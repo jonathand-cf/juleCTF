@@ -99,7 +99,7 @@ The flag is located in the "Santa's Secret Packet" line and includes a reference
 
 ## Flag
 
-```
+```txt
 JUL{wAtcH_oUt_foR_MIDDLEWARE_BYPASS__CVE-2025-29927}
 ```
 

@@ -1,20 +1,4 @@
 #!/usr/bin/env python3
-"""
-CTF Challenge: GeoGebra Christmas Tree Flag Recovery
-
-The encoding mechanism:
-1. Flag is converted to unicode bytes and reversed: flaggBytes = Reverse(TextToUnicode(flag))
-2. Bytes converted to large integer: flaggSomHeltall = Sum(flaggBytes(n) * 256^(n-1), n, 1, Length(flaggBytes))
-3. For each prime: Julekuler[i] = gåRundtJuletreet(flaggSomHeltall / prime[i])
-4. gåRundtJuletreet maps fractional part to position on tree polygon
-
-To reverse:
-1. For each ornament position, find which edge it's on
-2. Calculate the fractional distance along the perimeter (andelLengde)
-3. This is the fractional part of (flaggSomHeltall / prime[i])
-4. Use Chinese Remainder Theorem or similar to recover flaggSomHeltall
-5. Convert back to bytes and reverse to get flag
-"""
 
 from fractions import Fraction
 from typing import List, Tuple
@@ -158,7 +142,6 @@ def chinese_remainder_theorem(remainders):
     return total % prod
 
 def mod_inverse(a, m):
-    """Find modular inverse of a modulo m using extended Euclidean algorithm"""
     def extended_gcd(a, b):
         if a == 0:
             return b, 0, 1

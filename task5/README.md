@@ -19,7 +19,7 @@ tricky_decomp: ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), statica
 
 Basic strings extraction reveals:
 
-```
+```txt
 Welcome to my flag checker!
 Please enter the flag to verify: 
 Correct!
@@ -30,7 +30,7 @@ Incorrect!
 
 Initial disassembly shows character-by-character checks that appear to validate:
 
-```
+```txt
 JUL{it_surely_cant_be_this_easy}
 ```
 
@@ -70,7 +70,7 @@ ret
 
 The 27-byte XOR key is located at file offset `0x1363`:
 
-```
+```bash
 0e 6e 03 2b 6f 2a 0e 26 55 44 5a 58 3d 17 06 17 37 1c 0b 53 18 51 44 11 00 6f 04
 ```
 
@@ -133,7 +133,7 @@ flag = flag_bytes.decode('latin-1')
 
 ## Flag
 
-```
+```tzt
 JUL{g00d_j0b_h0pe_1_f00l3d_y0u!}
 ```
 

@@ -16,6 +16,7 @@ Upon accessing the website, we're presented with a registration and login system
 ### Application Structure
 
 The application consists of several endpoints:
+
 - `/register` - User registration
 - `/login` - User authentication
 - `/workshop` - Main dashboard (requires authentication + verification)
@@ -29,10 +30,8 @@ Looking at the application code, we can see the registration flow:
 app.post("/api/workshop/register", async (req, res) => {
     try {
         const { username, password } = req.body;
-        
-        // Validation checks...
-        
-        const userId = await createElf(req.body);  // ⚠️ Vulnerable line
+                
+        const userId = await createElf(req.body);  // vulnerable line
         
         addRoleToElf(userId, "elf");
         addRoleToElf(userId, "intern");
@@ -71,6 +70,7 @@ async function createElf(elfData) {
 The vulnerability exists in the `createElf` function where `Object.assign(defaults, elfData)` is used. This function merges all properties from `req.body` (elfData) into the defaults object, including properties that should not be user-controlled.
 
 The intended flow is:
+
 1. User registers with `username` and `password`
 2. Account is created with `verified: false`
 3. Admin manually verifies the account
@@ -97,7 +97,7 @@ async function createElf(elfData) {
         verified: false
     };
 
-    const elf = Object.assign(defaults, elfData);  // MASS ASSIGNMENT!
+    const elf = Object.assign(defaults, elfData);  // mass assignment!
     elf.password = await bcrypt.hash(elf.password, 12);
 
     const stmt = db.prepare("INSERT INTO elf (id, username, password, verified) VALUES (?, ?, ?, ?)");
@@ -169,7 +169,7 @@ This endpoint returns:
   "notices": [
     {
       "id": 0,
-      "message": "Here is a thank you to all the elves who have worked extra hard this season: <b>JUL{flag_here}</b>"
+      "message": "Here is a thank you to all the elves who have worked extra hard this season: <b>JUL{th4nk_y0u_f0r_th3_p3nt3st1ng}</b>"
     }
   ]
 }
@@ -177,7 +177,7 @@ This endpoint returns:
 
 ## Flag
 
-**JUL{...}**
+**JUL{th4nk_y0u_f0r_th3_p3nt3st1ng}**
 
 ## Impact
 
