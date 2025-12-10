@@ -1,6 +1,6 @@
 # JuleCTF 2025
 
-![alt text](image.png)
+![alt text](cyber2.png)
 Cyberlandslagsnissen trenger din hjelp! Hver dag i desember fram mot jul kommer det nye utfordringer innen cybersikkerhet.
 For mer informasjon om konkurransen se /info.
 
