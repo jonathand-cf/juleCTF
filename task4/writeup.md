@@ -72,6 +72,8 @@ To bypass the authentication middleware and access the protected route, we simpl
 curl -k "https://bypass.julec.tf/protected" -H "x-middleware-subrequest: middleware"
 ```
 
+Response is in [response.html](response.html)
+
 ### Why This Works
 
 1. The middleware checks for authentication on `/protected` routes

@@ -10,7 +10,7 @@ Can you submit your favourite Rudolph picture to Santa's Reindeer Tryouts, and o
 
 ### 1. Initial Reconnaissance
 
-Opened the challenge website, and clicked `upload`. It then opened `https://julec.tf/upload.php`, this told me it was hosted on a PHP server. The goal was to obtain `/flag.txt` from the server.
+Opened the challenge website, and clicked `upload`. It then opened `https://XXXXXXjulec.tf/upload.php`, this told me it was hosted on a PHP server. The goal was to obtain `/flag.txt` from the server.
 
 ### 2. Intercepting the Upload Request
 
