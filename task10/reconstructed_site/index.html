@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>God Jul! 🎅</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;600&display=swap');
+        @font-face {
+            font-family: 'font1';
+            src: url('font1.ttf') format('truetype');
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'font2';
+            src: url('font2.ttf') format('truetype');
+            font-display: swap;
+            unicode-range: U+41-5A, U+61-7A, U+e5-e6, U+f8, U+C5-C6, U+D8;
+        }
+
+        :root {
+            --julerod: #b3000c;
+            --julegronn: #0f5132;
+            --gull: #ffd700;
+            --hvit: #ffffff;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'font2', 'font1', 'Poppins', sans-serif;
+            background: linear-gradient(to bottom, #1a0b0c, var(--julerod));
+            color: var(--hvit);
+            overflow-x: hidden;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #snow-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .snowflake {
+            position: absolute;
+            top: -10px;
+            background-color: white;
+            border-radius: 50%;
+            opacity: 0.8;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            to { transform: translateY(100vh); }
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            z-index: 10;
+        }
+
+        h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 4rem;
+            margin: 0;
+            color: var(--gull);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 20px;
+            border: 2px solid rgba(255, 215, 0, 0.3);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            max-width: 600px;
+            width: 100%;
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .time-box {
+            background: var(--julegronn);
+            padding: 15px;
+            border-radius: 10px;
+            min-width: 80px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+        }
+
+        .time-box span {
+            display: block;
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--gull);
+        }
+
+        .time-box small {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(0,0,0,0.3);
+            z-index: 10;
+            font-size: 0.9rem;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 24px;
+            background-color: var(--gull);
+            color: var(--julerod);
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 30px;
+            transition: transform 0.3s ease;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            background-color: #fff;
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 3rem; }
+            .countdown { gap: 10px; }
+            .time-box { min-width: 60px; padding: 10px; }
+            .time-box span { font-size: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="snow-container"></div>
+
+    <header>
+        <h1>God Jul</h1>
+        <p>🧁🎆🦉🦊🧝🐿🐿🎆🧙 🧟🪵🦉 🍰🍢🧜 🎇🪵🌲🪵🧟🛍🦉🎆 🧸🥧🦉🎆🧛🧟🥧🎆 </p>
+    <p>/🎊🐿🎇? -> ❄🥧🧛🦊 🍢 🏔🧸🎆🧜🧙 🪵 🧚🧜🧝🎇🥧🦊🧛🧸🧝🧙. 🍾🔔🍪-🧙🍡🦊🦊🎆🦉 🎆🧜 '#⛄🥧🦉🎀🧜🌟🥧🦉🧟</p>
+    <p>⛄🍭✨{🎆🐿🧝🧸🪵🎆🧜_🎆🧜_🌲🧝🎇_🧛🧟🎆🐿🧙🪵🧙🌲!}</p>
+
+    </header>
+
+    <main>
+        <section class="card">
+            <h2>C ❄🍰🧝🧜 🦉🎆🧙🌲🎆 🎆🧜 🎇🎆🧟 🧟🪵🦉 🧙🪵🧛🧛🎆🧙 🦊🧝🐿🐿🎆🧜?</h2>
+            <div class="countdown" id="countdown">
+                <div class="time-box"><span id="days">00</span><small>🎇🛍🌲🎆🧜</small></div>
+                <div class="time-box"><span id="hours">00</span><small>🧟🪵🐿🎆🧜</small></div>
+                <div class="time-box"><span id="minutes">00</span><small>🐿🪵🧙🥧🧟🧟🎆🧜</small></div>
+                <div class="time-box"><span id="seconds">00</span><small>🧛🎆🦊🥧🧙🎇🎆🧜</small></div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>A 🪩🧙🧛🦊🎆🧜 🎇🎆🌲 🎆🧙 🐿🛍🌲🪵🧛🦊 🏠🍡🍦🧟🪵🎇</h2>
+            <p>
+                🕯🍢🧟🧟🎆 🧸🥧🦉🎆🧙 🎉🧜🪵🧙🌲🎆 🎇🎆🌲 🌲🦉🎆🎇🎆, 🏔🧜🎆🎇 🧝🌲 🐿🛍🧛🧛🎆 🧚🎆🧚🧚🎆🧜🦊🛍🦊🎆🧜! 🧦🍦🧟 🧟🪵🎇🎆🧙 🐿🎆🎇 🏔🛍🐿🪵🦉🪵🎆 🧝🌲 🍰🎆🧙🧙🎆🧜, 🧛🎆 🎆🧙 🌲🧝🎇 🧸🥧🦉🎆🏔🪵🦉🐿, 🧝🌲 🦉🛍 🧸🥧🦉🎆🏔🧜🎆🎇🎆🧙 🧛🎆🧙🦊🎆 🧛🎆🌲.
+            </p>
+            <a href="#" class="btn" onclick="spillMusikk()">🎶 🌟🦉🪵🦊🦊 🏔🧝🧜 🧸🥧🦉🎆🧛🧟🎆🐿🧙🪵🧙🌲</a>
+        </section>
+    </main>
+    <!-- /🎊🐿🎇? -> ❄🥧🧛🦊 🍢 🏔🧸🎆🧜🧙 🪵 🧚🧜🧝🎇🥧🦊🧛🧸🧝🧙. 🍾🔔🍪-🧙🍡🦊🦊🎆🦉 🎆🧜 '#⛄🥧🦉🎀🧜🌟🥧🦉🧟' -->
+    <footer>
+        &copy; <span id="year"></span> - ✨🛍🌲🎆🧟 🐿🎆🎇 ❤️ 🧝🌲 🦊🛍🦊🛍🧝
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        const snowContainer = document.getElementById('snow-container');
+        const snowFlakeCount = 50;
+
+        for (let i = 0; i < snowFlakeCount; i++) {
+            let snow = document.createElement('div');
+            snow.className = 'snowflake';
+            snow.style.left = Math.random() * 100 + '%';
+            snow.style.width = (Math.random() * 10 + 5) + 'px';
+            snow.style.height = snow.style.width;
+            snow.style.animationDuration = (Math.random() * 3 + 2) + 's';
+            snow.style.animationDelay = (Math.random() * 5) + 's';
+            snowContainer.appendChild(snow);
+        }
+
+        function updateCountdown() {
+            const now = new Date();
+            const currentYear = now.getFullYear();
+            let xmasDate = new Date(currentYear, 11, 24, 17, 0, 0); 
+
+            if (now > xmasDate) {
+                xmasDate = new Date(currentYear + 1, 11, 24, 17, 0, 0);
+            }
+
+            const diff = xmasDate - now;
+
+            const d = Math.floor(diff / 1000 / 60 / 60 / 24);
+            const h = Math.floor(diff / 1000 / 60 / 60) % 24;
+            const m = Math.floor(diff / 1000 / 60) % 60;
+            const s = Math.floor(diff / 1000) % 60;
+
+            document.getElementById('days').innerText = d < 10 ? '0' + d : d;
+            document.getElementById('hours').innerText = h < 10 ? '0' + h : h;
+            document.getElementById('minutes').innerText = m < 10 ? '0' + m : m;
+            document.getElementById('seconds').innerText = s < 10 ? '0' + s : s;
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+        function spillMusikk() {
+            alert("Se for deg at 'På låven sitter nissen' spilles nå! 🎻");
+        }
+    </script>
+</body>
+</html>
