@@ -15,8 +15,6 @@
 >
 > OBS: Oppgaven er laget i Geogebra 5 Classic. Andre versjoner kan være at ikke er 100% kompatible
 
-**Translation:** "Now we have washed the floor, and we have carried wood. We have set up bird streamers, so the only thing missing is to decorate the tree. I have made some sketches in GeoGebra about where on the tree the Christmas ornaments should be, based on the flag. I have saved the position of the Christmas ornaments in faktiske_julekuler.txt, but I have lost the flag itself. Fortunately, I have a backup of my test file geogebratreet.ggb which shows how the position of the Christmas ornaments is calculated."
-
 ## Files Provided
 
 - `geogebratreet.ggb` - GeoGebra file containing the encoding mechanism
@@ -26,7 +24,7 @@
 
 ### Extracting GeoGebra File
 
-GeoGebra files are ZIP archives. Extracting the contents:
+After using GeoGebra 5 Classic a while and playing around, it kept crashing and looking it up, GeoGebra files are ZIP archives. I can therefore extract the contents:
 
 ```bash
 unzip geogebratreet.ggb -d ggb_extracted
@@ -70,6 +68,7 @@ Julekuler := Sequence(gåRundtJuletreet(flaggSomHeltall / primtall(n)), n, 1, 61
 #### 3. Key Function: `gåRundtJuletreet(x)`
 
 This function takes a number `x` and:
+
 1. Extracts the fractional part: `desimaler(x) = x - floor(x)`
 2. Maps it to a position on the tree perimeter
 3. Returns the (x, y) coordinate at that position
@@ -145,7 +144,7 @@ python3 solve.py
 
 ### Key Results
 
-```
+```txt
 Found 61 ornaments
 Expected 61 ornaments (one per prime)
 
@@ -166,7 +165,7 @@ FLAG: JUL{så_gjør_v1_5å_når_vi_går_rundt_geogebratre3t}
 
 ## Flag
 
-```
+```txt
 JUL{så_gjør_v1_5å_når_vi_går_rundt_geogebratre3t}
 ```
 
@@ -184,6 +183,7 @@ JUL{så_gjør_v1_5å_når_vi_går_rundt_geogebratre3t}
 - Python 3 with `fractions` module
 - Text editor for XML analysis
 - Command line utilities (`unzip`)
+- GeoGebra 5 Classic
 
 ---
 

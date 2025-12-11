@@ -2,7 +2,7 @@
 
 - **Challenge:** Cyber Quest for Santa 1  
 - **Authors:** Shirajuki, Tweey & olefredrik  
-- **Link:** https://cyber-quest-for-santa-1.julec.tf  
+- **Challange Link:** <https://cyber-quest-for-santa-1.julec.tf>
 
 ## Description
 
@@ -14,27 +14,31 @@
 
 ## Approach
 
-1. Opened the site in Firefox and used **Override Content** on `index-DFzDK9Dl.js` to modify the client logic locally.
-2. Disabled map collision bodies so the player could move “out of bounds”:
-   - In `index-DFzDK9Dl.js`, replaced the collider creation block
+Opened the given **link** <https://cyber-quest-for-santa-1.julec.tf> in Firefox and used **Override Content** on `index-DFzDK9Dl.js` to modify the client logic locally.
 
-     ```js
-     if (collisions) {
-       add rect/area/body for each collision object…
-     }
-     ```
+Disabled map collision bodies so the player could move “out of bounds”:
 
-     with a guard
+In `index-DFzDK9Dl.js`, replaced the collider creation block
 
-     ```js
-     if (!1 && collisions) { ... }
-     ```
+ ```js
+if (collisions) {
+  add rect/area/body for each collision object…
+ }
+ ```
 
-      effectively skipping collider creation.
+with a guard
 
-      **Result**: player physics no longer registered the map walls, enabling free movement through the scene.
-3. Reloaded with the overridden script and walked outside the intended play area to reach hidden NPC/reindeer locations without obstruction.
-4. Each reindeer revealed a fragment of the flag; collecting and concatenating all parts produced the final flag.
+ ```js
+ if (!1 && collisions) { ... }
+ ```
+
+effectively skipping collider creation.
+
+**Result**: player physics no longer registered the map walls, enabling free movement through the scene.
+
+Reloaded with the overridden script and walked outside the intended play area to reach hidden NPC/reindeer locations without obstruction.
+
+Each reindeer revealed a fragment of the flag; collecting and concatenating all parts produced the final flag.
 
 ## Flag
 `JUL{l3ts_s4v3_4ll_th4m_r31nd33rs_4nd_m4yb3_4ls0_s4nta_f0r_th1s_chr1stm4s}`

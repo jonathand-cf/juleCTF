@@ -10,4 +10,4 @@ Dette er en samling CTF-oppgaver og tilhørende writeups fra JuleCTF 2025 fra [C
 
 ## Oppgaver
 
-- Se katalogene `task2`, `task3`, ..., `task9` for individuelle utfordringer.
+- Se katalogene `Luke_1`, `Luke_2`, ..., `Luke_24` for individuelle utfordringer.
