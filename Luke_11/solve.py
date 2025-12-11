@@ -11,11 +11,11 @@ leaked = (
     "hlhhlhllhhlhllhhllllhlhhhlh"
 )
 
-q = int(leaked.replace("h", "1").replace("l", "0"), 2)
-q = n // q
-phi = (q - 1) * (q - 1)
+p = int(leaked.replace("h", "1").replace("l", "0"), 2)
+q = n // p
+phi = (p - 1) * (q - 1)
 d = pow(e, -1, phi)
 m = pow(ct, d, n)
 
 plaintext = m.to_bytes((m.bit_length() + 7) // 8, "big")
-print(plaintext.decode().strip())
+print("Flag:", plaintext.decode().strip())
