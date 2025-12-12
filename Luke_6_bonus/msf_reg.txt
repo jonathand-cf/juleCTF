@@ -1,0 +1,7 @@
+POST /api/workshop/register HTTP/1.1
+Host: 08fccd581446cc9a.julec.tf
+Content-Type: application/json
+Content-Length: 63
+Connection: close
+
+{"username":"msfuser1","password":"Password1!","verified":true}

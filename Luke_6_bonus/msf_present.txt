@@ -1,0 +1,8 @@
+POST /api/workshop/present HTTP/1.1
+Host: 08fccd581446cc9a.julec.tf
+Cookie: connect.sid=s%3ASJun9uinHNL6Q_HIN-xbaWkiLYXHNhJY.xV6%2BEqaYgJv7p1%2FXdxo4T65XPhp79XVP8eMHR%2FVjEN8
+Content-Type: application/json
+Content-Length: 26
+Connection: close
+
+{"presentname":"flag"}

