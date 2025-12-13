@@ -1,0 +1,10 @@
+Found mappings:
+capitalize -> 📜
+str_iterator -> 🎶
+__alloc__ -> 🍪
+inni -> 🎅
+sorted -> 🥶
+chr -> 🧣
+oct -> 🎁
+slett -> 🎄
+ellers -> 🧝

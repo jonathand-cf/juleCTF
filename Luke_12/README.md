@@ -56,9 +56,9 @@ It forbids all alphanumeric characters, standard parentheses, quotes, and some p
 
 ### Solution Strategy
 
-Since we cannot simply write string literals (no quotes allowed) or numbers (no digits allowed), we must construct them using available primitives.
+Since I cannot simply write string literals (no quotes allowed) or numbers (no digits allowed), we must construct them using available primitives.
 
-1. **Numbers**: We can generate any integer using `🏂` (1) and `🥶` (0) with bitwise shifting (`<<`) and addition/OR.
+1. **Numbers**: I can generate any integer using `🏂` (1) and `🥶` (0) with bitwise shifting (`<<`) and addition/OR.
     - Example: `5` = `101` binary = `(1<<2) | 1`.
 2. **Strings**: We cannot create string literals directly. However, we have access to the `bytes` type via `🦌`.
     - We can construct a list of integers representing UTF-8 bytes: `🎉num1🎺num2...🎊`.
@@ -71,7 +71,7 @@ Since we cannot simply write string literals (no quotes allowed) or numbers (no 
 
 ## Solver Script
 
-We wrote a script to automate the generation of this Julespråk payload.
+I wrote a script to automate the generation of this Julespråk payload.
 
 ```python
 import sys
@@ -117,6 +117,6 @@ print(payload)
 ## Running the Solution
 
 1. Generate the payload: `python3 solve.py > payload.txt`
-2. Send to server: `ncat --ssl julesprak-fengsel.julec.tf 1337 < payload.txt`
+2. Send to server: `(cat payload.txt; sleep 2) | ncat --ssl julesprak-fengsel.julec.tf 1337`
 
 **Flag:** `JUL{Jul3språk_j3g_h4r_s4vn3t_d3g_5ånn!}`
