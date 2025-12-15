@@ -1,0 +1,95 @@
+int __cdecl play_game(int connected_socket)
+{
+  int choice; // eax
+  Location state; // [rsp+14h] [rbp-Ch]
+  int running; // [rsp+18h] [rbp-8h]
+
+  state = LOC_START;
+  running = 1;
+  while ( running )
+  {
+    print_options(connected_socket, state);
+    choice = read_choice(connected_socket);
+    if ( choice == -1 )
+    {
+      sendln(connected_socket, "\nI didn't understand that.\n");
+    }
+    else
+    {
+      switch ( state )
+      {
+        case LOC_START:
+          switch ( choice )
+          {
+            case 1:
+              state = LOC_WORKSHOP;
+              break;
+            case 2:
+              state = LOC_STABLES;
+              break;
+            case 3:
+              state = LOC_GINGERBREAD;
+              break;
+            case 4:
+              state = LOC_HALL;
+              break;
+            case 5:
+              running = 0;
+              break;
+            default:
+              sendln(connected_socket, "Choose a valid number.\n");
+              break;
+          }
+          break;
+        case LOC_WORKSHOP:
+          if ( choice == 1 )
+          {
+            state = LOC_GINGERBREAD;
+          }
+          else if ( choice == 2 )
+          {
+            sendln(connected_socket, "\nA broken wind-up Santa sputters: 'Ho—ERROR—Ho!'\n");
+          }
+          else
+          {
+            state = LOC_START;
+          }
+          break;
+        case LOC_STABLES:
+          if ( choice == 1 )
+            state = LOC_GINGERBREAD;
+          else
+            state = LOC_START;
+          break;
+        case LOC_GINGERBREAD:
+          if ( choice == 1 )
+          {
+            state = LOC_SLEIGH;
+          }
+          else if ( choice == 2 )
+          {
+            sendln(connected_socket, "\nYou peek behind a gingerbread house.\n");
+          }
+          else
+          {
+            state = LOC_START;
+          }
+          break;
+        case LOC_HALL:
+          if ( choice == 1 )
+            state = LOC_SLEIGH;
+          else
+            state = LOC_START;
+          break;
+        case LOC_SLEIGH:
+          running = 0;
+          break;
+        default:
+          running = 0;
+          break;
+      }
+    }
+  }
+  sendln(connected_socket, "Thanks for playing!\n");
+  return 0;
+}

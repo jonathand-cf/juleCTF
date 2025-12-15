@@ -1,0 +1,9 @@
+void __cdecl santa_finder(int connected_socket)
+{
+  greet_user(connected_socket);
+  if ( play_game(connected_socket) )
+    sendln(connected_socket, "You found me!\n");
+  else
+    sendln(connected_socket, "Better luck next time!\n");
+  close(connected_socket);
+}

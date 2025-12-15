@@ -1,0 +1,16 @@
+void __cdecl load_flag_to_location(int connected_socket)
+{
+  FILE *fp; // [rsp+18h] [rbp-8h]
+
+  fp = popen("cat flag.txt", "r");
+  if ( fp )
+  {
+    fgets(location, 128, fp);
+    fclose(fp);
+    play_game(connected_socket);
+  }
+  else
+  {
+    puts("Flag file not found");
+  }
+}

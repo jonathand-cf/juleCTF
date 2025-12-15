@@ -1,0 +1,25 @@
+void __cdecl greet_user(int sock)
+{
+  int len_copied; // [rsp+18h] [rbp-48h]
+  char *temp_input; // [rsp+28h] [rbp-38h]
+  char name_buffer[40]; // [rsp+30h] [rbp-30h] BYREF
+  unsigned __int64 v4; // [rsp+58h] [rbp-8h]
+
+  v4 = __readfsqword(0x28u);
+  temp_input = (char *)malloc(0x400u);
+  sendln(sock, asc_402070);
+  if ( recv_line(sock, temp_input, 0x400u) > 0 )
+  {
+    len_copied = atoi(temp_input);
+    printf("Received %d bytes\n", len_copied);
+    sendln(sock, asc_4020CA);
+    if ( (int)recv(sock, name_buffer, len_copied, 0) <= 0 )
+      return;
+    name_buffer[31] = 0;
+    sendln(sock, "Hello: ");
+    sendln(sock, name_buffer);
+    sendln(sock, "\n");
+  }
+  free(temp_input);
+  print_intro(sock);
+}

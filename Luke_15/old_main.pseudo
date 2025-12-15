@@ -1,0 +1,59 @@
+int __fastcall main(int argc, const char **argv, const char **envp)
+{
+  unsigned int flag; // [rsp+Ch] [rbp-B4h] BYREF
+  socklen_t addrlen; // [rsp+10h] [rbp-B0h] BYREF
+  int server_socket4; // [rsp+14h] [rbp-ACh]
+  int connected_socket; // [rsp+18h] [rbp-A8h]
+  pid_t pid; // [rsp+1Ch] [rbp-A4h]
+  sockaddr_in server_addr; // [rsp+20h] [rbp-A0h] BYREF
+  sockaddr_storage addr; // [rsp+30h] [rbp-90h] BYREF
+  unsigned __int64 v11; // [rsp+B8h] [rbp-8h]
+
+  v11 = __readfsqword(0x28u);
+  server_socket4 = socket(2, 1, 6);
+  memset(&server_addr, 0, sizeof(server_addr));
+  server_addr.sin_family = 2;
+  server_addr.sin_addr.s_addr = 0;
+  server_addr.sin_port = htons(0x539u);
+  flag = 1;
+  setsockopt(server_socket4, 1, 2, &flag, 4u);
+  if ( bind(server_socket4, (const struct sockaddr *)&server_addr, 0x10u) >= 0 )
+  {
+    if ( listen(server_socket4, 10) >= 0 )
+    {
+      printf("Santa is listening on port %d...\n", 1337);
+      while ( 1 )
+      {
+        do
+        {
+          addrlen = 128;
+          connected_socket = accept(server_socket4, (struct sockaddr *)&addr, &addrlen);
+        }
+        while ( connected_socket < 0 );
+        pid = fork();
+        if ( pid >= 0 )
+        {
+          if ( !pid )
+          {
+            close(server_socket4);
+            santa_finder(connected_socket);
+            exit(0);
+          }
+          close(connected_socket);
+        }
+        else
+        {
+          perror("fork");
+          close(connected_socket);
+        }
+      }
+    }
+    puts("Unable to listen on socket");
+    return 3;
+  }
+  else
+  {
+    puts("Unable to bind to socket");
+    return 2;
+  }
+}

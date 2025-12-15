@@ -1,0 +1,50 @@
+void __cdecl print_options(int sock, Location loc)
+{
+  switch ( loc )
+  {
+    case LOC_START:
+      sendln(sock, "Where do you want to search?\n");
+      sendln(sock, "1) The Toy Workshop\n");
+      sendln(sock, "2) The Reindeer Stables\n");
+      sendln(sock, "3) The Gingerbread Forest\n");
+      sendln(sock, "4) The Hall of Naughty & Nice Records\n");
+      sendln(sock, "5) Quit\n> ");
+      break;
+    case LOC_WORKSHOP:
+      sendln(sock, "\nToy Workshop:\n");
+      sendln(sock, "Elves are frantic. You see a red wool thread and cookie crumbs.\n");
+      sendln(sock, "1) Follow the cookie crumbs\n");
+      sendln(sock, "2) Search deeper in the workshop\n");
+      sendln(sock, "3) Return\n> ");
+      break;
+    case LOC_STABLES:
+      sendln(sock, "\nReindeer Stables:\n");
+      sendln(sock, "Rudolph points toward the Gingerbread Forest.\n");
+      sendln(sock, "1) Ask Rudolph for directions\n");
+      sendln(sock, "2) Return\n> ");
+      break;
+    case LOC_GINGERBREAD:
+      sendln(sock, "\nGingerbread Forest:\n");
+      sendln(sock, "The air smells delicious. You find a boot print!\n");
+      sendln(sock, "1) Follow the boot print\n");
+      sendln(sock, "2) Peek behind a gingerbread house\n");
+      sendln(sock, "3) Return\n> ");
+      break;
+    case LOC_HALL:
+      sendln(sock, "\nHall of Naughty & Nice Records:\n");
+      sendln(sock, "A glowing note mentions Santa checking final deliveries.\n");
+      sendln(sock, "1) Look for clues\n");
+      sendln(sock, "2) Return\n> ");
+      break;
+    case LOC_SLEIGH:
+      sendln(sock, "\nSleigh Hangar:\n");
+      sendln(sock, "You creep forward...\n");
+      sendln(sock, "A jolly voice: 'Ho ho ho! You found me!'\n");
+      sendln(sock, asc_402410);
+      sendln(sock, "You found Santa in the ");
+      sendln(sock, location);
+      break;
+    default:
+      return;
+  }
+}
