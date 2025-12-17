@@ -15,8 +15,8 @@ while true; do
     -H 'accept-language: en-GB,en;q=0.7' \
     -H 'cache-control: no-cache' \
     -H 'content-type: application/json' \
-    -b "session=$SESSION" \
-    -H "csrf-token:$CSRF_TOKEN" \
+    -b 'session=42e031e4-72a4-4a75-bab4-7f442d822d0a.ZMcBXRRgyHM2UUdOFu-Ld8URvGM' \
+    -H 'csrf-token: ca662606d87d71f5c7cac7057d22e8f2f006261e926bca7f86c8ca2ed62528ca' \
     -H 'origin: https://julec.tf' \
     -H 'pragma: no-cache' \
     -H 'priority: u=1, i' \
@@ -31,6 +31,5 @@ while true; do
     -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36' \
     --data-raw '{"challengeId":12}'
 
-  echo "Curl command executed. Waiting 5 minutes..."
   sleep 300 # Wait for 300 seconds (5 minutes)
 done
