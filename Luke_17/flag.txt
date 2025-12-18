@@ -1,9 +1,11 @@
 v1 = Y3liZXI= (cyber)
-v2 =
-v3 = 
+v2 = 010111110110001001101100 (_bl) + .. ._. ..__._ (IR_)
+v3 = influenser (Var et kryssord på videoen)
 
-
-together = 
+v1 was a note at the end of the video
+v2 was black and white and black socks lined into binary 010111110110001001101100 and milk cartons stacked to morse (inclomplete and ended in _) a
+v3 was a crossword in the middle of the video
+together = cyber_blir_influenser (flag JUL{cyber_blir_influenser})
 
 All possible ways binary:
 111000001110010010100110
@@ -13,12 +15,3 @@ All possible ways binary:
 All possible ways morse:
 .. ._. ..__._
 
-
-Clock
-07:00 
-07:40 
-07:44
-07:53
-08:53 
-13:28
-03:42 
