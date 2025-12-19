@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎄 Nordpolens Juleportal 🎅</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a472a 0%, #2d5a3d 50%, #1a472a 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .snøfnugg-beholder {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: 0;
+        }
+
+        .snøfnugg {
+            position: absolute;
+            top: -10px;
+            color: white;
+            font-size: 1em;
+            animation: fall linear infinite;
+            opacity: 0.8;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(100vh) rotate(360deg);
+            }
+        }
+
+        .beholder {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            max-width: 450px;
+            width: 100%;
+            position: relative;
+            z-index: 1;
+            border: 4px solid #c41e3a;
+        }
+
+        .overskrift {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .overskrift h1 {
+            color: #c41e3a;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .overskrift .emoji {
+            font-size: 3em;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .faner {
+            display: flex;
+            margin-bottom: 25px;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 2px solid #1a472a;
+        }
+
+        .fane {
+            flex: 1;
+            padding: 12px;
+            text-align: center;
+            background: #f0f0f0;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: bold;
+            color: #1a472a;
+        }
+
+        .fane:hover {
+            background: #d4edda;
+        }
+
+        .fane.aktiv {
+            background: #1a472a;
+            color: white;
+        }
+
+        .skjema-seksjon {
+            display: none;
+        }
+
+        .skjema-seksjon.aktiv {
+            display: block;
+        }
+
+        .skjema-gruppe {
+            margin-bottom: 20px;
+        }
+
+        .skjema-gruppe label {
+            display: block;
+            margin-bottom: 8px;
+            color: #1a472a;
+            font-weight: bold;
+        }
+
+        .skjema-gruppe input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 1em;
+            transition: border-color 0.3s;
+        }
+
+        .skjema-gruppe input:focus {
+            outline: none;
+            border-color: #1a472a;
+        }
+
+        .knapp {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(135deg, #c41e3a 0%, #a01830 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .knapp:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(196, 30, 58, 0.4);
+        }
+
+        .knapp:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        .melding {
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            display: none;
+        }
+
+        .melding.suksess {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .melding.feil {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        .melding.vis {
+            display: block;
+        }
+
+        .lenke {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .lenke a {
+            color: #1a472a;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .lenke a:hover {
+            text-decoration: underline;
+        }
+
+        .forespørsels-id {
+            font-size: 0.75em;
+            color: #888;
+            margin-top: 10px;
+            word-break: break-all;
+        }
+
+        .kontrollpanel {
+            display: none;
+        }
+
+        .kontrollpanel.aktiv {
+            display: block;
+        }
+
+        .kontrollpanel h2 {
+            color: #1a472a;
+            margin-bottom: 20px;
+        }
+
+        .flagg-boks {
+            background: linear-gradient(135deg, #ffd700 0%, #ffed4a 100%);
+            border: 3px solid #c41e3a;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .flagg-boks .flagg {
+            font-family: monospace;
+            font-size: 1.2em;
+            background: white;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+            word-break: break-all;
+        }
+
+        .bruker-info {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .knapp-loggut {
+            background: linear-gradient(135deg, #6c757d 0%, #495057 100%);
+        }
+
+        .dekorasjoner {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+    <div class="snøfnugg-beholder" id="snøfnuggBeholder"></div>
+    
+    <div class="beholder">
+        <div class="dekorasjoner">🎄⭐🎄</div>
+        
+        <div class="overskrift">
+            <span class="emoji">🎅</span>
+            <h1>Nordpolens Juleportal</h1>
+            <p>Velkommen til nissens hemmelige portal!</p>
+        </div>
+
+        <!-- Autentisering -->
+        <div id="autentiseringSeksjon">
+            <div class="faner">
+                <div class="fane aktiv" data-fane="logginn">Logg inn</div>
+                <div class="fane" data-fane="registrer">Registrer</div>
+                <div class="fane" data-fane="glemt">Glemt passord</div>
+            </div>
+
+            <div id="melding" class="melding"></div>
+
+            <div class="skjema-seksjon aktiv" id="logginnSkjema">
+                <form onsubmit="håndterInnlogging(event)">
+                    <div class="skjema-gruppe">
+                        <label for="innloggingEpost">📧 E-post</label>
+                        <input type="email" id="innloggingEpost" placeholder="din@epost.no" required>
+                    </div>
+                    <div class="skjema-gruppe">
+                        <label for="innloggingPassord">🔒 Passord</label>
+                        <input type="password" id="innloggingPassord" placeholder="Ditt hemmelige passord" required>
+                    </div>
+                    <button type="submit" class="knapp">🎄 Logg inn</button>
+                </form>
+            </div>
+
+            <div class="skjema-seksjon" id="registrerSkjema">
+                <form onsubmit="håndterRegistrering(event)">
+                    <div class="skjema-gruppe">
+                        <label for="regEpost">📧 E-post</label>
+                        <input type="email" id="regEpost" placeholder="din@epost.no" required>
+                    </div>
+                    <div class="skjema-gruppe">
+                        <label for="regPassord">🔒 Passord</label>
+                        <input type="password" id="regPassord" placeholder="Velg et sterkt passord" required>
+                    </div>
+                    <div class="skjema-gruppe">
+                        <label for="regPassordBekreft">🔒 Bekreft passord</label>
+                        <input type="password" id="regPassordBekreft" placeholder="Gjenta passordet" required>
+                    </div>
+                    <button type="submit" class="knapp">🎁 Registrer meg</button>
+                </form>
+            </div>
+
+            <div class="skjema-seksjon" id="glemtSkjema">
+                <form onsubmit="håndterGlemtPassord(event)">
+                    <div class="skjema-gruppe">
+                        <label for="glemtEpost">📧 E-post</label>
+                        <input type="email" id="glemtEpost" placeholder="din@epost.no" required>
+                    </div>
+                    <button type="submit" class="knapp">📬 Send tilbakestillingskode</button>
+                </form>
+            </div>
+
+            <div class="skjema-seksjon" id="tilbakestillSkjema">
+                <form onsubmit="håndterTilbakestillPassord(event)">
+                    <div class="skjema-gruppe">
+                        <label for="tilbakestillEpost">📧 E-post</label>
+                        <input type="email" id="tilbakestillEpost" placeholder="din@epost.no" required>
+                    </div>
+                    <div class="skjema-gruppe">
+                        <label for="tilbakestillKode">🔑 Tilbakestillingskode</label>
+                        <input type="text" id="tilbakestillKode" placeholder="Kode fra e-post" required>
+                    </div>
+                    <div class="skjema-gruppe">
+                        <label for="nyttPassord">🔒 Nytt passord</label>
+                        <input type="password" id="nyttPassord" placeholder="Ditt nye passord" required>
+                    </div>
+                    <button type="submit" class="knapp">🔐 Oppdater passord</button>
+                </form>
+                <div class="lenke">
+                    <a href="#" onclick="visTilbakestillKodeSkjema(false)">← Tilbake</a>
+                </div>
+            </div>
+
+            <div id="forespørselsId" class="forespørsels-id"></div>
+        </div>
+
+        <div id="kontrollpanel" class="kontrollpanel">
+            <h2>🎄 Velkommen!</h2>
+            <div class="bruker-info">
+                <strong>Innlogget som:</strong> <span id="brukerEpost"></span>
+            </div>
+            <div id="flaggSeksjon"></div>
+            <button class="knapp knapp-loggut" onclick="håndterLoggUt()">🚪 Logg ut</button>
+        </div>
+    </div>
+
+    <script>
+        function lagSnøfnugg() {
+            const beholder = document.getElementById('snøfnuggBeholder');
+            const snøfnuggTegn = ['❄', '❅', '❆', '✻', '✼'];
+            
+            for (let i = 0; i < 50; i++) {
+                const snøfnugg = document.createElement('div');
+                snøfnugg.className = 'snøfnugg';
+                snøfnugg.textContent = snøfnuggTegn[Math.floor(Math.random() * snøfnuggTegn.length)];
+                snøfnugg.style.left = Math.random() * 100 + '%';
+                snøfnugg.style.animationDuration = (Math.random() * 3 + 2) + 's';
+                snøfnugg.style.animationDelay = Math.random() * 5 + 's';
+                snøfnugg.style.fontSize = (Math.random() * 1 + 0.5) + 'em';
+                beholder.appendChild(snøfnugg);
+            }
+        }
+        lagSnøfnugg();
+
+        document.querySelectorAll('.fane').forEach(fane => {
+            fane.addEventListener('click', () => {
+                document.querySelectorAll('.fane').forEach(f => f.classList.remove('aktiv'));
+                document.querySelectorAll('.skjema-seksjon').forEach(s => s.classList.remove('aktiv'));
+                
+                fane.classList.add('aktiv');
+                document.getElementById(fane.dataset.fane + 'Skjema').classList.add('aktiv');
+                skjulMelding();
+            });
+        });
+
+        function visMelding(tekst, erFeil = false) {
+            const mld = document.getElementById('melding');
+            mld.textContent = tekst;
+            mld.className = 'melding vis ' + (erFeil ? 'feil' : 'suksess');
+        }
+
+        function skjulMelding() {
+            document.getElementById('melding').classList.remove('vis');
+        }
+
+        function visForespørselsId(id) {
+            document.getElementById('forespørselsId').textContent = 'Forespørsels-ID: ' + id;
+        }
+
+        function visTilbakestillKodeSkjema(vis) {
+            document.getElementById('glemtSkjema').classList.toggle('aktiv', !vis);
+            document.getElementById('tilbakestillSkjema').classList.toggle('aktiv', vis);
+        }
+
+        async function håndterInnlogging(e) {
+            e.preventDefault();
+            const epost = document.getElementById('innloggingEpost').value;
+            const passord = document.getElementById('innloggingPassord').value;
+
+            try {
+                const respons = await fetch('/api/autentisering/logginn', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ epost, passord })
+                });
+                const data = await respons.json();
+                visForespørselsId(data.forespørselsId);
+                
+                if (data.suksess) {
+                    localStorage.setItem('token', data.token);
+                    localStorage.setItem('epost', epost);
+                    localStorage.setItem('erAdministrator', data.erAdministrator);
+                    visKontrollpanel();
+                } else {
+                    visMelding(data.melding, true);
+                }
+            } catch (feil) {
+                visMelding('En feil oppstod. Prøv igjen senere.', true);
+            }
+        }
+
+        async function håndterRegistrering(e) {
+            e.preventDefault();
+            const epost = document.getElementById('regEpost').value;
+            const passord = document.getElementById('regPassord').value;
+            const bekreft = document.getElementById('regPassordBekreft').value;
+
+            if (passord !== bekreft) {
+                visMelding('Passordene matcher ikke!', true);
+                return;
+            }
+
+            try {
+                const respons = await fetch('/api/autentisering/registrer', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ epost, passord })
+                });
+                const data = await respons.json();
+                visForespørselsId(data.forespørselsId);
+                visMelding(data.melding, !data.suksess);
+            } catch (feil) {
+                visMelding('En feil oppstod. Prøv igjen senere.', true);
+            }
+        }
+
+        async function håndterGlemtPassord(e) {
+            e.preventDefault();
+            const epost = document.getElementById('glemtEpost').value;
+
+            try {
+                const respons = await fetch('/api/autentisering/glemt-passord', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ epost })
+                });
+                const data = await respons.json();
+                visForespørselsId(data.forespørselsId);
+                visMelding(data.melding, !data.suksess);
+                
+                if (data.suksess) {
+                    document.getElementById('tilbakestillEpost').value = epost;
+                    visTilbakestillKodeSkjema(true);
+                }
+            } catch (feil) {
+                visMelding('En feil oppstod. Prøv igjen senere.', true);
+            }
+        }
+
+        async function håndterTilbakestillPassord(e) {
+            e.preventDefault();
+            const epost = document.getElementById('tilbakestillEpost').value;
+            const kode = document.getElementById('tilbakestillKode').value;
+            const nyttPassord = document.getElementById('nyttPassord').value;
+
+            try {
+                const respons = await fetch('/api/autentisering/tilbakestill-passord', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ epost, kode, nyttPassord })
+                });
+                const data = await respons.json();
+                visForespørselsId(data.forespørselsId);
+                visMelding(data.melding, !data.suksess);
+                
+                if (data.suksess) {
+                    setTimeout(() => {
+                        document.querySelector('[data-fane="logginn"]').click();
+                        visTilbakestillKodeSkjema(false);
+                    }, 2000);
+                }
+            } catch (feil) {
+                visMelding('En feil oppstod. Prøv igjen senere.', true);
+            }
+        }
+
+        async function visKontrollpanel() {
+            document.getElementById('autentiseringSeksjon').style.display = 'none';
+            document.getElementById('kontrollpanel').classList.add('aktiv');
+            document.getElementById('brukerEpost').textContent = localStorage.getItem('epost');
+
+            const erAdmin = localStorage.getItem('erAdministrator') === 'true';
+            const flaggSeksjon = document.getElementById('flaggSeksjon');
+
+            if (erAdmin) {
+                try {
+                    const respons = await fetch('/api/autentisering/flagg', {
+                        headers: { 'Authorization': 'Bearer ' + localStorage.getItem('token') }
+                    });
+                    const data = await respons.json();
+                    
+                    if (data.flagg) {
+                        flaggSeksjon.innerHTML = `
+                            <div class="flagg-boks">
+                                <h3>🎁 Her er flagget ditt! 🎁</h3>
+                                <div class="flagg">${data.flagg}</div>
+                            </div>
+                        `;
+                    }
+                } catch (feil) {
+                    flaggSeksjon.innerHTML = '<p>Kunne ikke hente flagget.</p>';
+                }
+            } else {
+                flaggSeksjon.innerHTML = `
+                    <div class="bruker-info">
+                        <p>🎄 Du er logget inn som vanlig bruker.</p>
+                        <p>Bare administratorer har tilgang til det hemmelige flagget!</p>
+                    </div>
+                `;
+            }
+        }
+
+        function håndterLoggUt() {
+            localStorage.removeItem('token');
+            localStorage.removeItem('epost');
+            localStorage.removeItem('erAdministrator');
+            document.getElementById('autentiseringSeksjon').style.display = 'block';
+            document.getElementById('kontrollpanel').classList.remove('aktiv');
+            document.querySelector('[data-fane="logginn"]').click();
+        }
+
+        if (localStorage.getItem('token')) {
+            visKontrollpanel();
+        }
+    </script>
+</body>
+</html>

@@ -1,7 +1,0 @@
-POST /api/workshop/login HTTP/1.1
-Host: 08fccd581446cc9a.julec.tf
-Content-Type: application/json
-Content-Length: 47
-Connection: close
-
-{"username":"msfuser1","password":"Password1!"}
