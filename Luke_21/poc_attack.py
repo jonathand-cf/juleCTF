@@ -1,4 +1,3 @@
-# patch_p12.py
 import sys
 
 def read_len(buf, i):
@@ -18,30 +17,18 @@ def read_tlv(buf, i):
     next_offset = content_start + ln
     return tag, ln, content_start, next_offset
 
-def main(src, dst):
-    data = bytearray(open(src, 'rb').read())
-
-    # root SEQUENCE
-    tag, ln, content_start, next_offset = read_tlv(data, 0)
+def patch(src, dst):
+    data = bytearray(open(src,'rb').read())
+    tag, ln, content_start, _ = read_tlv(data, 0)
     if tag != 0x30:
-        raise SystemExit("Not a SEQUENCE at root")
-    off = content_start  # step into root content
-
-    # version
-    _, _, _, off = read_tlv(data, off)
-    # authSafe ContentInfo
-    _, _, _, off = read_tlv(data, off)
-    # macData starts at current off
+        raise SystemExit('root not SEQUENCE')
+    off = content_start
+    _, _, _, off = read_tlv(data, off)  # version
+    _, _, _, off = read_tlv(data, off)  # authSafe
     if off >= len(data):
-        raise SystemExit("No third child found")
-    if data[off] != 0x30:
-        print(f"Warning: third child tag is 0x{data[off]:02x}, patching anyway")
+        raise SystemExit('no third child')
     data[off] = 0xA0
+    open(dst,'wb').write(data)
 
-    open(dst, 'wb').write(data)
-    print(f"patched -> {dst}")
-
-if __name__ == "__main__":
-    if len(sys.argv) != 3:
-        raise SystemExit(f"Usage: {sys.argv[0]} legit.p12 patched.p12")
-    main(sys.argv[1], sys.argv[2])
+patch('new_legit.p12','new_patched.p12')
+print('wrote new_patched.p12')
