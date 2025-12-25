@@ -1,0 +1,11 @@
+[
+  {
+    "applyTo": "server",
+    "headers": [
+      {
+        "name": "connection",
+        "value": "done"
+      }
+    ]
+  }
+]
