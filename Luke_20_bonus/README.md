@@ -5,12 +5,12 @@
 
 ## Access Recap
 
-- SSH tunnel: `ssh -o ProxyCommand="openssl s_client -quiet -connect ead67e35b7a32a2b.julec.tf:1337" Cyber@localhost` (`Cyber123!`).
+- SSH tunnel: `ssh -o ProxyCommand="openssl s_client -quiet -connect redacted.julec.tf:1337" Cyber@localhost` (`Cyber123!`).
 - We already planted our key into `/home/git/.ssh/authorized_keys` via the symlink overwrite (CVE-2025-8110 style), so we can SSH as `git` with `id_rsa`:
 
 ```sh
 ssh -o StrictHostKeyChecking=no \
-    -o ProxyCommand="openssl s_client -quiet -connect ead67e35b7a32a2b.julec.tf:1337" \
+    -o ProxyCommand="openssl s_client -quiet -connect redacted.julec.tf:1337" \
     -i id_rsa git@localhost
 ```
 
@@ -64,4 +64,3 @@ ssh -o StrictHostKeyChecking=no \
      ```txt
      $pbkdf2-sha256$10000$nBiFIYAU2L$ec55c2f083b287589fa9788a7adffe07bb49d8b83c441bb88cc6787ba9ea91c02069341bc3f957af72bf84174062d8733a55
      ```
-
