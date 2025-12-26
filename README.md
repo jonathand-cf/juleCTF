@@ -6,7 +6,9 @@ For mer informasjon om konkurransen se /info.
 
 ## About
 
-Dette er en samling CTF-oppgaver og tilhørende writeups fra JuleCTF 2025 fra [Cyberlandslaget](https://cyberlandslaget.no/)
+This is a collection of CTF tasks and associated writeups from JuleCTF 2025 from [Cyberlandslaget](https://cyberlandslaget.no/)
+
+Very Fun!
 
 ## Challanges
 
