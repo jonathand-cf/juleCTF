@@ -8,7 +8,7 @@
 ## Writeup
 
 - Gogs 0.13.3 (`5084b4a9b77a506f5e287e82e945e1c6882b827a`) on `http://localhost:3000`
-- SSH to container: `ssh -o ProxyCommand="openssl s_client -quiet -connect ead67e35b7a32a2b.julec.tf:1337" Cyber@localhost` (pass `Cyber123!`)
+- SSH to container: `ssh -o ProxyCommand="openssl s_client -quiet -connect redacted.julec.tf:1337" Cyber@localhost` (pass `Cyber123!`)
 - Goal: read `/home/git/user.txt`
 
 ## Exploit (symlink overwrite via Contents API)
@@ -36,7 +36,7 @@ SSH as `git` with the provided `id_rsa` and read the flag:
 
 ```bash
 ssh -o StrictHostKeyChecking=no \
-    -o ProxyCommand="openssl s_client -quiet -connect ead67e35b7a32a2b.julec.tf:1337" \
+    -o ProxyCommand="openssl s_client -quiet -connect redacted.julec.tf:1337" \
     -i id_rsa git@localhost "cat /home/git/user.txt"
 ```
 
